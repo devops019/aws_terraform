@@ -5,7 +5,7 @@ pipeline{
             steps{
                 withCredentials([[
                     $class: 'AmazonWebServicesCredentialsBinding',
-                    credentialId: "jenkins-terraform",
+                    credentialsId: "jenkins-terraform",
                     accessKeyVariable: "AWS_ACCESS_KEY_ID",
                     secretKeyVariable: "AWS_SECRET_KEY_ID"
 
