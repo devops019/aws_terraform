@@ -4,7 +4,7 @@ pipeline{
         stage("deploy terraform"){
             steps{
                 withCredentials([[
-                    $class: 'AmazonWebservicesCredentialsBinding',
+                    $class: 'AmazonWebServicesCredentialsBinding',
                     credentialId: "jenkins-terraform",
                     accessKeyVariable: "AWS_ACCESS_KEY_ID",
                     secretKeyVariable: "AWS_SECRET_KEY_ID"
