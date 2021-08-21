@@ -10,9 +10,9 @@ pipeline{
                     secretKeyVariable: "AWS_SECRET_KEY_ID"
 
                 ]]){
-                    sh 'terraform init'
-                    sh 'terraform plan -var ${config.access_key}=${AWS_ACCESS_KEY_ID} -var ${config.secret_key}=${AWS_SECRET_KEY_ID} -out Outputforplan'
-                    sh 'terraform apply -input=false Outputforplan'
+                    sh '/usr/local/bin/terraform init'
+                    sh '/usr/local/bin/terraform plan -var ${config.access_key}=${AWS_ACCESS_KEY_ID} -var ${config.secret_key}=${AWS_SECRET_KEY_ID} -out Outputforplan'
+                    sh '/usr/local/bin/terraform apply -input=false Outputforplan'
                 }
             }
         }
