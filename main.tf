@@ -1,7 +1,7 @@
 resource "aws_instance" "venu-instance" {
  ami = "ami-02f84cf47c23f1769"
  instance_type = "t2.micro"
- security_groups = ["${aws_security_group.venu_terraform.name}"]
+ security_groups = ["${aws_security_group.venu_securitygroup.name}"]
  
  tags = {
      Name = "venu_1"
@@ -36,7 +36,7 @@ resource "aws_security_group" "terraform" {
   }
 }
 
-resource "aws_security_group" "venu_terraform" {
+resource "aws_security_group" "venu_securityGroup" {
   name = "venu_securityGroup"
   description = "venu_1 security group"
   ingress = [ {
