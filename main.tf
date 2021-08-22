@@ -9,7 +9,7 @@ resource "aws_instance" "venu-instance" {
 resource "aws_instance" "rahul-instance" {
  ami = "ami-02f84cf47c23f1769"
  instance_type = "t2.micro"
- security_groups = ["${aws_security_group.terraform}"]
+ security_groups = ["${aws_security_group.terraform.name}"]
  
  tags = {
      Name = "rahul_1"
