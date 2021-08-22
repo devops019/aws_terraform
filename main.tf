@@ -36,7 +36,7 @@ resource "aws_security_group" "terraform" {
   }
 }
 
-resource "aws_security_group" "venu_securityGroup" {
+resource "aws_security_group" "venu_securitygroup" {
   name = "venu_securityGroup"
   description = "venu_1 security group"
   ingress = [ {
@@ -52,6 +52,6 @@ resource "aws_security_group" "venu_securityGroup" {
     } ]
   
   tags = {
-    Name = "venu_securitygroup"
+    Name = "venu_SecurityGroup"
   }
 }
