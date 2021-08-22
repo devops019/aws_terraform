@@ -37,21 +37,20 @@ resource "aws_security_group" "terraform" {
 }
 
 resource "aws_security_group" "venu_securitygroup" {
-  name = "venu_securityGroup"
-  description = "venu_1 security group"
+  name = "venu_1_securityGroup"
+  description = "venu security group"
   ingress = [ {
     cidr_blocks = [ "0.0.0.0/0" ]
-    description = "security_group"
+    description = "ingress"
     from_port = 8080
-    protocol = "tcp"
-    to_port = 8080
-    ipv6_cidr_blocks = ["::/0"]
+    ipv6_cidr_blocks = [ "::/0" ]
     prefix_list_ids = []
+    protocol = "tcp"
     security_groups = []
     self = false
-    } ]
-  
+    to_port = 8080
+  } ]
   tags = {
-    Name = "venu_SecurityGroup"
-  }
+          Name = "venu_1_security_group"
+      }
 }
