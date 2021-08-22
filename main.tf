@@ -16,7 +16,7 @@ resource "aws_instance" "rahul-instance" {
  } 
 }
 resource "aws_security_group" "terraform" {
-  name = "instance security"
+  name = "ec2instance_security"
   description = "security group"
   ingress = [ {
     cidr_blocks = [ "0.0.0.0/0" ]
