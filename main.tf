@@ -15,9 +15,9 @@ resource "aws_instance" "rahul-instance" {
      Name = "rahul_1"
  } 
 }
-resource "aws_security_group" "terrafrom" {
+resource "aws_security_group" "terraform" {
   name = "instance security"
-  description = "rahul security group"
+  description = "security group"
   ingress = [ {
     cidr_blocks = [ "0.0.0.0/0" ]
     description = "security_group"
